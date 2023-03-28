@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Reactive.Linq;
-using Autofac;
 using Restaurant.Core.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -14,7 +13,6 @@ namespace Restaurant.Mobile.UI.Pages
         public FoodsPage()
         {
             InitializeComponent();
-            ViewModel = App.Container.Resolve<FoodsViewModel>();
             FoodsList.SelectionChanged += (s, e) => { FoodsList.SelectedItem = null; };
         }
 
